@@ -1,6 +1,6 @@
 # OpenCV integrado com Aplicações Web
 
-### Objetivo
+## Objetivo
 
 Desenvolver soluções de visão computacional integrada à dispositivos móveis e aplicações web.
 
