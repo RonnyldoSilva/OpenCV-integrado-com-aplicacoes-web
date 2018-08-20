@@ -30,3 +30,8 @@ Acesse www.boost.org, baixe a versão mais recente, extraia, entre na pasta, e d
 sudo ./b2 install
 ```
 ### O básico do básico
+
+* Vamos criar uma aplicação simples só pra testar se tudo está OK!
+* Crie uma pasta chamada “SmartFilter”.
+* Dentro desta pasta, crie um arquivo chamado “main.cpp” dentro de uma subpasta chamada “src”.
+* “src” será onde iremos salvar nossos códigos-fonte.
