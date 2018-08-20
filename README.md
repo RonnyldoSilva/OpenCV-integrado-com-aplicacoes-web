@@ -85,9 +85,10 @@ default: $(objs)
 clean:
     rm –rf release/* SmartFilter
 ```
-Compile e baixe esta imagem de teste abaixo:
+Abra o terminal do Ubuntu, compile e baixe esta imagem de teste abaixo, tudo isso dentro da pasta onde contém o Makefile:
 
 ```shell
+make
 wget https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png
 ```
 
