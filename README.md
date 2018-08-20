@@ -62,3 +62,7 @@ int main(int argc, char **argv)  {
     return 0;
 }
 ```
+
+* Agora vamos criar um Makefile simples:
+
+Makefile:
