@@ -29,3 +29,4 @@ Acesse www.boost.org, baixe a versão mais recente, extraia, entre na pasta, e d
 ./bootstrap.sh
 sudo ./b2 install
 ```
+### O básico do básico
