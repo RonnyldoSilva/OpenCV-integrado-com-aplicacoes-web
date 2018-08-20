@@ -52,4 +52,13 @@ int main(int argc, char **argv)  {
         cerr << “Usage: <PATH_TO_IMAGE>” << endl;
         exit(-1);
     }
+        Mat img = imread(argv[1]);
+    if (!img.data) {
+        cerr << “Could not read image: “ << argv[1] << endl;
+        exit(-1);
+    }
+    imshow(“image”, img);
+    waitKey(0);
+    return 0;
+}
 ```
