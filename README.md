@@ -85,3 +85,9 @@ default: $(objs)
 clean:
     rm –rf release/* SmartFilter
 ```
+Compile e baixe esta imagem de teste abaixo:
+
+```shell
+wget https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png
+```
+
