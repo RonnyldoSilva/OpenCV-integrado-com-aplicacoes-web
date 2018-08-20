@@ -66,3 +66,22 @@ int main(int argc, char **argv)  {
 * Agora vamos criar um Makefile simples:
 
 Makefile:
+
+```makefile
+CPPFLAGS=-std=c++11
+OPENCV_LIBS=-lopencv_core –lopencv_highgui –lopencv_imgcodecs –lopencv_imgproc
+LIBS=$(OPENCV_LIBS)
+LDFLAGS=$(LIBS)
+srcs=$(wildcard src/*.cpp)
+objs=$(patsubst src/%.cpp,release/%.o,$(srcs))
+
+release/%.o: src/%.cpp
+    mkdir –p release
+    g++ $(CPPFLAGS) –c $^ -o $@
+    
+default: $(objs)
+    g++ $(CPPFLAGS) –o SmartFilter $(objs) $(LDFLAGS)
+    
+clean:
+    rm –rf release/* SmartFilter
+```
