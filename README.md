@@ -21,3 +21,11 @@ mkdir opencv/release
 cd opencv/releasecmake ..
 make –j8 && sudo make install
 ```
+### Instalando o Boost
+
+Acesse www.boost.org, baixe a versão mais recente, extraia, entre na pasta, e digite apenas dois comandos:
+
+```shell
+./bootstrap.sh
+sudo ./b2 install
+```
