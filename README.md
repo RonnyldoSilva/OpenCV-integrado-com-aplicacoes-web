@@ -35,3 +35,21 @@ sudo ./b2 install
 * Crie uma pasta chamada “SmartFilter”.
 * Dentro desta pasta, crie um arquivo chamado “main.cpp” dentro de uma subpasta chamada “src”.
 * “src” será onde iremos salvar nossos códigos-fonte.
+* Crie o seguinte arquivo: 
+
+src/main.cpp
+```c++
+#include <iostream>
+
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main(int argc, char **argv)  {
+    if (argc != 2) {
+        cerr << “Usage: <PATH_TO_IMAGE>” << endl;
+        exit(-1);
+    }
+```
