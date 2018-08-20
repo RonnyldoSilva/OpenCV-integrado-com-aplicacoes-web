@@ -29,7 +29,7 @@ Acesse www.boost.org, baixe a versão mais recente, extraia, entre na pasta, e d
 ./bootstrap.sh
 sudo ./b2 install
 ```
-### O básico do básico
+## O básico do básico
 
 * Vamos criar uma aplicação simples só pra testar se tudo está OK!
 * Crie uma pasta chamada “SmartFilter”.
