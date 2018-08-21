@@ -94,3 +94,21 @@ E teste:
 ```shell
 ./SmartFilter ./Lenna.png
 ```
+Vamos agora criar uma classe abstrata para representar um filtro genérico. Essa classe abstrata estará no arquivo “src/abstract_filter.h”.
+
+abstract_filter.h
+```c++
+#ifndef ABSTRACTFILTER_H
+#define ABSTRACTFILTER_H
+
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+class AbstractFilter {
+    public:
+        virtual cv::Mat filter(const cv::Mat &input) = 0;
+};
+
+#endif // ABSTRACTFILTER_H
+```
