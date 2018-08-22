@@ -132,3 +132,21 @@ Agora vamos adicionar mais outros três filtros para dar um sentido de completud
 * Filtro de cartoonização
 * Filtro detector de bordas
 * Filtro retrô
+
+Filtro de detecção de bordas:
+
+src/edge_filter.h
+```c++
+#ifndef EDGEFILTER_H
+#define EDGEFILTER_H
+
+#include “abstract_filter.h”
+
+class EdgeFilter : public AbstractFilter 
+{
+    public:
+        cv::Mat filter(const cv::Mat &input);
+};
+
+#endif // EDGEFILTER_H
+```
