@@ -47,16 +47,22 @@ src/main.cpp
 using namespace std;
 using namespace cv;
 
-int main(int argc, char **argv)  {
-    if (argc != 2) {
+int main(int argc, char **argv)  
+{
+    if (argc != 2) 
+    {
         cerr << “Usage: <PATH_TO_IMAGE>” << endl;
         exit(-1);
     }
-        Mat img = imread(argv[1]);
-    if (!img.data) {
+    
+    Mat img = imread(argv[1]);
+    
+    if (!img.data) 
+    {
         cerr << “Could not read image: “ << argv[1] << endl;
         exit(-1);
     }
+    
     imshow(“image”, img);
     waitKey(0);
     return 0;
@@ -105,7 +111,8 @@ abstract_filter.h
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-class AbstractFilter {
+class AbstractFilter 
+{
     public:
         virtual cv::Mat filter(const cv::Mat &input) = 0;
 };
