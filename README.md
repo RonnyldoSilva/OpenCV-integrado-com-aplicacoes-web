@@ -127,3 +127,8 @@ Mat GrayscaleFilter::filter(const Mat &input)
     return output;
 }
 ```
+
+Agora vamos adicionar mais outros três filtros para dar um sentido de completude à nossa aplicação:
+* Filtro de cartoonização
+* Filtro detector de bordas
+* Filtro retrô
