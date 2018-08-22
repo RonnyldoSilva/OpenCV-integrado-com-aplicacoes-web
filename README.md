@@ -23,12 +23,12 @@ make –j8 && sudo make install
 ```
 ### Instalando o Boost
 
-Acesse www.boost.org, baixe a versão mais recente, extraia, entre na pasta, e digite apenas dois comandos:
+Boost é a biblioteca que irá fazer a comunicação entre a aplicação c++ mais o Node JS:
 
 ```shell
-./bootstrap.sh
-sudo ./b2 install
+sudo apt-get install libboost-all-dev
 ```
+
 ## O básico do básico
 
 * Vamos criar uma aplicação simples só pra testar se tudo está OK!
