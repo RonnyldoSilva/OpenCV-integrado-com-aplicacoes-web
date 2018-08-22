@@ -112,3 +112,18 @@ class AbstractFilter {
 
 #endif // ABSTRACTFILTER_H
 ```
+Vamos agora criar uma classe abstrata para representar um filtro genérico. Essa classe abstrata estará no arquivo “src/abstract_filter.cpp”.
+
+src/grayscale_filter.cpp
+```c++
+#include “grayscale_filter.h”
+
+using namespace cv;
+
+Mat GrayscaleFilter::filter(const Mat &input) 
+{
+    Mat output;
+    cvtColor(input, output, CV_BGR2GRAY);
+    return output;
+}
+```
