@@ -318,3 +318,24 @@ int main(int argc, char **argv)
 
 Agora que temos nosso programa, queremos transformá-lo em um serviço de modo a aceitar requisições de outros programas e usuários. Para isto usaremos o Boost.Asio. 
 Boost.Asio (Asynchronous Input Output) é uma biblioteca dentre as bibliotecas do Boost usada para programação em rede. 
+
+* Vamos alterar nosso main para que agora ele receba como parâmetro unicamente a porta que o nosso programa irá escutar.
+
+src/main.cpp
+```c++
+#include <boost/bind.hpp>
+#include <boost/asio.hpp>
+
+using namespace boost::asio::ip;
+
+int main(int argc, char **argv)
+{
+    if (argc != 2)
+    {
+        cerr << “Usage: <PORT>” << endl;
+        exit(-1);
+    }
+    int port = atoi(argv[1]);
+    return 0;
+}
+```
