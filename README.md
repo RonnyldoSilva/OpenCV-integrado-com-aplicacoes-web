@@ -313,3 +313,8 @@ int main(int argc, char **argv)
 }
 
 ```
+
+### Criando o serviço
+
+Agora que temos nosso programa, queremos transformá-lo em um serviço de modo a aceitar requisições de outros programas e usuários. Para isto usaremos o Boost.Asio. 
+Boost.Asio (Asynchronous Input Output) é uma biblioteca dentre as bibliotecas do Boost usada para programação em rede. 
