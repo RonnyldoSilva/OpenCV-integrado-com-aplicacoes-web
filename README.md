@@ -157,7 +157,7 @@ class EdgeFilter : public AbstractFilter
 
 #endif // EDGEFILTER_H
 ```
-Filtro de contornos
+
 src/edge_filter.cpp
 ```c++
 #include “edge_filter.h”
@@ -190,3 +190,5 @@ class CartoonFilter : public AbstractFilter
 };
 #endif // CARTOONFILTER_H
 ```
+
+src/cartoon_filter.cpp
