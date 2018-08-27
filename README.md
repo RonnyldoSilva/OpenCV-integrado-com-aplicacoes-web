@@ -216,3 +216,6 @@ Mat CartoonFilter::filter(const Mat &input)
 }
 
 ```
+
+Filtro retrô
+src/retro_filter.h
