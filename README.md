@@ -140,7 +140,7 @@ Agora vamos adicionar mais outros três filtros para dar um sentido de completud
 * Filtro detector de bordas
 * Filtro retrô
 
-Filtro de detecção de bordas:
+##### Filtro de detecção de bordas:
 
 src/edge_filter.h
 ```c++
@@ -173,7 +173,8 @@ Mat EdgeFilter::filter(const Mat &input)
 }
 ```
 
-Filtro de cartoonização
+##### Filtro de cartoonização
+
 src/cartoon_filter.h
 ```c++
 #ifndef CARTOONFILTER_H
@@ -217,5 +218,19 @@ Mat CartoonFilter::filter(const Mat &input)
 
 ```
 
-Filtro retrô
+##### Filtro retrô
+
 src/retro_filter.h
+```c++
+#ifndef RETROFILTER_H
+#define RETROFILTER_H
+
+#include “abstract_filter.h”
+
+class RetroFilter : public AbstractFilter {
+public:
+    cv::Mat filter(const cv::Mat &input);
+};
+
+#endif // RETROFILTER_H
+```
