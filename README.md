@@ -265,13 +265,16 @@ src/main.cpp
 using namespace std;
 using namespace cv;
 
-enum FilterType {
+enum FilterType
+{
     GRAYSCALE = 0, EDGE = 1, CARTOON = 2, RETRO = 3
 }
 
-Mat applyFilter(const Mat &img, FilterType filterType) {
+Mat applyFilter(const Mat &img, FilterType filterType)
+{
     AbstractFilter *filter;
-    switch (filterType) {
+    switch (filterType) 
+    {
     case EDGE:
         filter = new EdgeFilter;
         break;
@@ -289,13 +292,16 @@ Mat applyFilter(const Mat &img, FilterType filterType) {
     return filtered;
 }
 
-int main(int argc, char **argv) {
-    if (argc != 3) {
+int main(int argc, char **argv) 
+{
+    if (argc != 3)
+    {
         cerr << “Usage: <PATH_TO_IMAGE> <FILTER 0=GRAYSCALE,1=EDGE,2=CARTOON,3=RETRO>” << endl;
         exit(-1);
     }
     Mat img = imread(argv[1]);
-    if (!img.data) {
+    if (!img.data)
+    {
         cerr << “Could not read image: “ << argv[1] << endl;
         exit(-1);
     }
