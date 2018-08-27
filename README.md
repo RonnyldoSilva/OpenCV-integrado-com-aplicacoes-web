@@ -341,3 +341,15 @@ int main(int argc, char **argv)
 ```
 
 Agora dentro do próprio *main* vamos criar uma classe chamada “Server”. Esta classe será responsável por aceitar e manipular novas requisições feitas ao nosso programa.
+
+```c++
+class Server
+{
+    public:
+        Server(boost::asio::io_service &ioservice, short port) : _acceptor(ioservice, tcp::endpoint(tcp::v4(), port)) {
+            startAccept();
+        }
+    private:
+        tcp::acceptor _acceptor;
+};
+```
