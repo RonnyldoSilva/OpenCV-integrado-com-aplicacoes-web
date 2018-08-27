@@ -339,3 +339,5 @@ int main(int argc, char **argv)
     return 0;
 }
 ```
+
+Agora dentro do próprio *main* vamos criar uma classe chamada “Server”. Esta classe será responsável por aceitar e manipular novas requisições feitas ao nosso programa.
