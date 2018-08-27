@@ -250,3 +250,60 @@ Mat RetroFilter::filter(const Mat &input) {
     return output;
 }
 ```
+
+Agora que temos todos os filtros implementados, vamos modificar nosso main.cpp para que seja possível passar outro argumento para o programa, indicando o filtro a ser usado.
+
+src/main.cpp
+```c++
+#include <iostream>
+
+#include “grayscale_filter.h”
+#include “edge_filter.h”
+#include “cartoon_filter.h”
+#include “retro_filter.h”
+
+using namespace std;
+using namespace cv;
+
+enum FilterType {
+    GRAYSCALE = 0, EDGE = 1, CARTOON = 2, RETRO = 3
+}
+
+Mat applyFilter(const Mat &img, FilterType filterType) {
+    AbstractFilter *filter;
+    switch (filterType) {
+    case EDGE:
+        filter = new EdgeFilter;
+        break;
+    case CARTOON:
+        filter = new CartoonFilter;
+        break;
+    case RETRO:
+        filter = new RetroFilter;
+        break;
+    default:
+        filter = new GrayscaleFilter;
+    }
+    Mat filtered = filter->filter(img);
+    delete filter;
+    return filtered;
+}
+
+int main(int argc, char **argv) {
+    if (argc != 3) {
+        cerr << “Usage: <PATH_TO_IMAGE> <FILTER 0=GRAYSCALE,1=EDGE,2=CARTOON,3=RETRO>” << endl;
+        exit(-1);
+    }
+    Mat img = imread(argv[1]);
+    if (!img.data) {
+        cerr << “Could not read image: “ << argv[1] << endl;
+        exit(-1);
+    }
+    FilterType filterType = (FilterType)atoi(argv[2]);
+    img = applyFilter(img, filterType);
+    imshow(“image”, img);
+    waitKey(0);
+    return 0;
+}
+
+```
