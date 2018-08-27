@@ -157,7 +157,7 @@ class EdgeFilter : public AbstractFilter
 
 #endif // EDGEFILTER_H
 ```
-
+Filtro de contornos
 src/edge_filter.cpp
 ```c++
 #include “edge_filter.h”
@@ -171,4 +171,10 @@ Mat EdgeFilter::filter(const Mat &input)
     Canny(output, output, 10, 100, 3);
     return output;
 }
+```
+
+Filtro de cartoonização
+src/cartoon_filter.h
+```c++
+
 ```
