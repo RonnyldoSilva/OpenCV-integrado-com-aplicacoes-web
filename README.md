@@ -234,3 +234,19 @@ public:
 
 #endif // RETROFILTER_H
 ```
+
+src/retro_filter.cpp
+```c++
+#include “retro_filter.h”
+
+using namespace cv;
+
+Mat RetroFilter::filter(const Mat &input) {
+    Mat output;
+    cvtColor(input, output, CV_BGR2GRAY);
+    Mat noise = Mat::zeros(output.size(), output.type());
+    randn(noise, 20, 40);
+    output += noise;
+    return output;
+}
+```
