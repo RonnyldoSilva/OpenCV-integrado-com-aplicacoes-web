@@ -356,3 +356,16 @@ class Server
 “io_service” e um objeto que nos permite se comunicar com o sistema operacional. Criamos um membro da classe chamado “_acceptor”,  que é responsável por escutar requisições em uma determinada porta, e recebe como argumentos em seu construtor o serviço que permite acessar o SO e a porta a qual ele irá escutar.
 
 * Vamos agora implementar o método “startAccept”.
+
+```c++
+class Server {
+...
+private:
+    ...
+    void startAccept() {
+        Connection *connection = new Connection(_acceptor.get_io_service());
+        _acceptor.async_accept(connection->socket(), 
+            boost::bind(&Server::handleAccept, this, connection, boost::placeholders::error));
+    }
+};
+```
