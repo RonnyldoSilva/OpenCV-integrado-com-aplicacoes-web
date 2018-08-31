@@ -358,15 +358,16 @@ class Server
 * Vamos agora implementar o método “startAccept”.
 
 ```c++
-class Server {
-...
-private:
+class Server 
+{
     ...
-    void startAccept() {
-        Connection *connection = new Connection(_acceptor.get_io_service());
-        _acceptor.async_accept(connection->socket(), 
-            boost::bind(&Server::handleAccept, this, connection, boost::placeholders::error));
-    }
+    private:
+        ...
+        void startAccept() {
+            Connection *connection = new Connection(_acceptor.get_io_service());
+            _acceptor.async_accept(connection->socket(), 
+                boost::bind(&Server::handleAccept, this, connection, boost::placeholders::error));
+        }
 };
 ```
 O método “async_accept” irá abrir um determinado socket e, uma vez aberto, irá chamar uma função de callback. A função “boost::bind” é usada para permitir passar um método da própria classe como argumento, coisa que não seria permitida em C++ puro.
