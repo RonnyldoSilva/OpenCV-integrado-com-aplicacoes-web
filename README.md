@@ -387,3 +387,4 @@ class Server
         }
 };
 ```
+Neste método, primeiro checamos se houve algum erro durante a abertura do socket. Se houve, deletamos a conexão que criamos anteriormente em “startAccept”. Caso contrário, iniciamos a conexão. De qualquer forma, devemos voltar a escutar por novas requisições, e portanto, devemos chamar o método “startAccept” novamente, simulando um loop infinito.
