@@ -369,3 +369,4 @@ private:
     }
 };
 ```
+O método “async_accept” irá abrir um determinado socket e, uma vez aberto, irá chamar uma função de callback. A função “boost::bind” é usada para permitir passar um método da própria classe como argumento, coisa que não seria permitida em C++ puro.
