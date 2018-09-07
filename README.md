@@ -439,4 +439,5 @@ int main(int argc, char **argv)
 ```
 O método “run” do ioservice é que irá efetivamente fazer uma chamada ao sistema operacional para fazer com que nosso programa escute em uma porta. 
 
+Agora podemos testar nosso serviço criado. Compile o programa, rode-o na porta 9000 e abra um terminal telnet:
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/telnet.png">
