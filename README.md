@@ -510,3 +510,17 @@ Agora teste usando Telnet e veja nossa aplicação funcionando!
 * Vamos implementar outro servidor em uma plataforma específica para fazer servidores HTTP que servira como middleware entre o cliente e a nossa aplicação contendo OpenCV.
 
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/servidorHTTP.png">    
+
+* Usaremos o Node para desenvolver nosso servidor HTTP.
+* No terminal, digite:
+```shell
+sudo apt-get install npm nodejs-legacy
+```
+* Em um diretório acima de “SmartFilter”, crie outra pasta chamada “SmartFilterHTTP”. 
+* Entre nesta pasta e digite:
+```shell
+npm init
+```
+* Este comando irá criar um arquivo de configuração chamado “package.json”, obrigatório para executar aplicações Node.
+
+<img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/npmInit.png">
