@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>SmatFilter</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	</head>
+	
+	<body ng-app="myApp" ng-controller="myController">
+		<h2>Smart Filter</h2>
+		<form ng-submit="sendPhoto()">
+			<input type="file" ng-model="photo" id="file" accept="image/*">
+			<select ng-model="type">
+				<option value="0">Grayscale Filter</option>
+				<option value="1">Edge Detector Filter</option>
+				<option value="2">Cartoonizer Filter</option>
+				<option value="3">Retro Filter</option>
+			</select>
+			<input type="submit" value="Send Photo">
+		</form>
+		<img src="{{photo}}"/>
+	</body>
+
+	<script>
+		
+		var file;
+		document.getElementById('file').onchange = function(ev){
+			file = ev.target.files[0];
+		};
+		
+		var app = angular.module('myApp', []); //create app
+		app.controller('myController', function($scope, $http){
+			$scope.type="0";
+			$scope.sendPhoto = function(){
+				$http({
+					method: 'POST',
+					url: '/send_photo',
+					data: {photo:file, type: $scope.type},
+					
+					headers: {'Content-Type': undefined},
+					
+					transformRequest: function(data, headersGetter){
+						var formData = new FormData();
+						angular.forEach(data, function(value, key){
+							formData.append(key, value);
+						});
+						
+						return formData;
+					}
+				}).then(function(result){
+					$scope.photo = '/photo/' + result.data.output;
+				});
+			
+			}
+		});
+	</script>
+	
+</html>
