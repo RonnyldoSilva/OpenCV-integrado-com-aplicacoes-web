@@ -442,6 +442,7 @@ O método “run” do ioservice é que irá efetivamente fazer uma chamada ao s
 ## Testando nosso serviço criado
 
 Agora podemos testar nosso serviço criado. Compile o programa, rode-o na porta 9000 e abra um terminal telnet:
+
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/telnet.png">
 
 ## Adaptando nossa aplicação ao serviço
