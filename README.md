@@ -392,12 +392,14 @@ Neste método, primeiro checamos se houve algum erro durante a abertura do socke
 Agora vamos implementar o método “start” de Connection. Inicialmente ele irá ler o que o cliente escreveu.
 
 ```c++
-class Connection {
-public:
-    ...
-    void start() {
-       _socket.async_read_some(boost::asio::buffer(_data, MAX_LENGTH), boost::bind(&Connection::handleRead, this, boost::placeholders::error, boost::placeholders::bytes_transferred));
-   }
+class Connection 
+{
+    public:
+        ...
+        void start()
+        {
+           _socket.async_read_some(boost::asio::buffer(_data, MAX_LENGTH), boost::bind(&Connection::handleRead, this, boost::placeholders::error, boost::placeholders::bytes_transferred));
+        }
 };
 ```
 
