@@ -524,3 +524,9 @@ npm init
 * Este comando irá criar um arquivo de configuração chamado “package.json”, obrigatório para executar aplicações Node.
 
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/npmInit.png">
+
+* Perceba o campo “entry point”. Ele é importantíssimo. Indica o primeiro arquivo a ser chamado durante a execução da nossa aplicação (o main). Guarde seu nome (index.js). 
+* Vamos agora instalar algumas bibliotecas adicionais que irão nos ajudar durante o nosso desevolvimento. Podemos instalá-la através do Node Package Manager (NPM), que exerce a mesma função do Maven para Java.
+```shell
+npm install –save express body-parser multer uuid
+```
