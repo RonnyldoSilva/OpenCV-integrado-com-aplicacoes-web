@@ -500,3 +500,13 @@ class Connection
             ...
 };
 ```
+Agora teste usando Telnet e veja nossa aplicação funcionando!
+
+## Criando um servidor HTTP
+
+* Nossa aplicação já sabe se comunicar na rede!
+* Porém, ela sabe se comunicar usando o protocolo HTTP...
+* Seria oneroso e contraprodutivo para nós implementar todo o protocolo
+* Vamos implementar outro servidor em uma plataforma específica para fazer servidores HTTP que servira como middleware entre o cliente e a nossa aplicação contendo OpenCV.
+
+<img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/servidorHTTP.png">    
