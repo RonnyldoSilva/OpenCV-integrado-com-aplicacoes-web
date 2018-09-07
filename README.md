@@ -437,3 +437,4 @@ int main(int argc, char **argv)
     }
 }
 ```
+O método “run” do ioservice é que irá efetivamente fazer uma chamada ao sistema operacional para fazer com que nosso programa escute em uma porta. 
