@@ -445,6 +445,12 @@ Agora podemos testar nosso serviço criado. Compile o programa, rode-o na porta 
 
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/telnet.png">
 
+Para saber qual porta do telnet está disponível:
+
+```shell
+netstat -tuplen
+```
+
 ## Adaptando nossa aplicação ao serviço
 
 * Agora que temos um serviço rodando, vamos fazer algo útil com ele! Vamos fazer com que o serviço aplique filtros. A lógica vai ser muito semelhante a aplicação anterior, só que ao invés do caminho da imagem e do tipo de filtro ser passado como argumentos do programa, será passado pelo socket.
