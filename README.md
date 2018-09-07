@@ -467,5 +467,36 @@ class Connection
             while (getline(ss, token, ‘,’)) tokens.push_back(token);
             return tokens;
         } 
+        
+        void handleRead(...) {
+            cout << “Read “ << _data << endl;
+            vector<string> tokens = split(bytesTransferred);
+            if (tokens.size() != 3) {
+                _data[0] = 0;
+            } 
+            else 
+            {
+                try
+                {
+                    Mat img = imread(tokens[0]);
+                    if (!img.data)
+                    {
+                        _data[0] = 0;
+                    }
+                    else
+                    {
+                        FilterType filterType = (FilterType)atoi(tokens[2].c_str());
+                        img = applyFilter(img, filterType);
+                        imwrite(tokens[1], img);
+                        _data[0] = 1;
+                    }
+                } 
+                catch (...)
+                {
+                    _data[0] = 0;
+                }
+                _data[1] = 0;
+                bytesTransferred = 2;
+            ...
 };
 ```
