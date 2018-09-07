@@ -439,5 +439,14 @@ int main(int argc, char **argv)
 ```
 O método “run” do ioservice é que irá efetivamente fazer uma chamada ao sistema operacional para fazer com que nosso programa escute em uma porta. 
 
+## Testando nosso serviço criado
+
 Agora podemos testar nosso serviço criado. Compile o programa, rode-o na porta 9000 e abra um terminal telnet:
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/telnet.png">
+
+## Adaptando nossa aplicação ao serviço
+
+* Agora que temos um serviço rodando, vamos fazer algo útil com ele! Vamos fazer com que o serviço aplique filtros. A lógica vai ser muito semelhante a aplicação anterior, só que ao invés do caminho da imagem e do tipo de filtro ser passado como argumentos do programa, será passado pelo socket.
+* Iremos convencionar que o cliente sempre irá mandar os dados no seguinte formato:
+* <CAMINHO_DA_IMAGEM_DE_ENTRADA>,<CAMINHO_DA_IMAGEM_DE_SAIDA>,<TIPO_DE_FILTRO>
+* O servidor irá mandar de volta “1”, em caso de sucesso, e “0”, em caso de erro
