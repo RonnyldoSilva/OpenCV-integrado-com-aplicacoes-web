@@ -406,6 +406,14 @@ Este método lê alguma coisa do socket de forma assíncrona através do método
 
 Agora vamos implementar o método “handleRead”.
 ```c++
-
+class Connection 
+{
+    private:
+        ...
+        void handleRead(const boost::system::error_code &error, size_t bytesTransferred)
+        {
+            _socket.async_write_some(boost::asio::buffer(_data, bytesTransferred), boost::bind(&Connection::handleWrite, this, boost::placeholders::error));
+        }
+};
 ```
 Após a leitura, iremos iniciar a escrita. O que iremos escrever será exatamente o que foi lido, armazenado em “_data”. Um método de callback é registrado para indicar o fim da escrita.
