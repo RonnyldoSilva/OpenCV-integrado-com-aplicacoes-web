@@ -402,5 +402,10 @@ class Connection
         }
 };
 ```
-
 Este método lê alguma coisa do socket de forma assíncrona através do método “async_read_some” e salva o resultado em “_data”. MAX_LENGTH indica que ele ira ler no máximo MAX_LENGTH bytes. Após a leitura, o método “handleRead” é chamado, recebendo como parâmetros se ocorreu algum erro e quantos bytes conseguiram ser lidos.
+
+Agora vamos implementar o método “handleRead”.
+```c++
+
+```
+Após a leitura, iremos iniciar a escrita. O que iremos escrever será exatamente o que foi lido, armazenado em “_data”. Um método de callback é registrado para indicar o fim da escrita.
