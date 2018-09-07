@@ -451,3 +451,21 @@ Agora podemos testar nosso serviço criado. Compile o programa, rode-o na porta 
 * Iremos convencionar que o cliente sempre irá mandar os dados no seguinte formato:
 * <CAMINHO_DA_IMAGEM_DE_ENTRADA>,<CAMINHO_DA_IMAGEM_DE_SAIDA>,<TIPO_DE_FILTRO>
 * O servidor irá mandar de volta “1”, em caso de sucesso, e “0”, em caso de erro
+
+No método “handleRead”, da classe “Connection”, primeiro converta o resultado para uma string e aplique um Split por virgula:
+```c++
+class Connection 
+{
+    private:
+        ...
+        vector<string> split(size_t bytesTransferred) 
+        {
+            stringstream ss;
+            for (size_t i = 0; i < bytesTransferred; i++) ss << _data[i];
+            vector<string> tokens;
+            string token;
+            while (getline(ss, token, ‘,’)) tokens.push_back(token);
+            return tokens;
+        } 
+};
+```
