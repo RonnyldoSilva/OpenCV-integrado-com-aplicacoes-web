@@ -388,3 +388,7 @@ class Server
 };
 ```
 Neste método, primeiro checamos se houve algum erro durante a abertura do socket. Se houve, deletamos a conexão que criamos anteriormente em “startAccept”. Caso contrário, iniciamos a conexão. De qualquer forma, devemos voltar a escutar por novas requisições, e portanto, devemos chamar o método “startAccept” novamente, simulando um loop infinito.
+
+Agora vamos implementar o método “start” de Connection. Inicialmente ele irá ler o que o cliente escreveu.
+
+Este método lê alguma coisa do socket de forma assíncrona através do método “async_read_some” e salva o resultado em “_data”. MAX_LENGTH indica que ele ira ler no máximo MAX_LENGTH bytes. Após a leitura, o método “handleRead” é chamado, recebendo como parâmetros se ocorreu algum erro e quantos bytes conseguiram ser lidos.
