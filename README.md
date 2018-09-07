@@ -417,3 +417,23 @@ class Connection
 };
 ```
 Após a leitura, iremos iniciar a escrita. O que iremos escrever será exatamente o que foi lido, armazenado em “_data”. Um método de callback é registrado para indicar o fim da escrita.
+
+Para finalizar nosso example simples, vamos simplesmente criar um objeto do tipo “Server” dentro do nosso main:
+```c++
+...
+int main(int argc, char **argv) 
+{
+    ...
+    try 
+    {
+        boost::asio::io_service ioservice;
+        Server server(ioservice, port);
+        ioservice.run();
+    }
+    catch (exception &e) 
+    {
+        cerr << “ERROR: “ << e.what() << endl;
+        exit(-1);
+    }
+}
+```
