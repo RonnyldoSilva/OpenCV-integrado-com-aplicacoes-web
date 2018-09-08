@@ -552,4 +552,8 @@ app.get(‘/’, function(req, res)
 app.listen(8080);
 ```
 * “require” exerce a função de um “import”, importando uma biblioteca (no caso, express, que facilita a criação de servidores HTTP)
-* “app.get(‘/’, ...)” cria uma nova rota na nossa aplicação. Toda vez que o usuário fizer uma requisição do tipo GET para o recurso “/”, uma função será invocada para responder esta requisição.
+* “app.get(‘/’, ...)” cria uma nova rota na nossa aplicação. Toda vez que o usuário fizer uma requisição do tipo GET para o 
+* recurso “/”, uma função será invocada para responder esta requisição.
+* A função de callback do “app.get” recebe no mínimo dois argumentos: “req”, que guarda informações sobre a requisição, e “res”, que guarda informações sobre a resposta que iremos enviar de volta.
+* Para enviar uma resposta de volta, simplesmente usamos “res.send(mensagem)”
+* “app.listen” faz a aplicação efetivamente escutar em uma porta (8080)
