@@ -557,3 +557,12 @@ app.listen(8080);
 * A função de callback do “app.get” recebe no mínimo dois argumentos: “req”, que guarda informações sobre a requisição, e “res”, que guarda informações sobre a resposta que iremos enviar de volta.
 * Para enviar uma resposta de volta, simplesmente usamos “res.send(mensagem)”
 * “app.listen” faz a aplicação efetivamente escutar em uma porta (8080)
+
+Vamos testar! Inicie a aplicação da seguinte forma:
+```shell
+node index.js
+```
+E agora vá em algum browser e acesse o endereço:
+*http://localhost:8080 
+
+<img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/helloWorld.png">
