@@ -566,3 +566,14 @@ E agora vá em algum browser e acesse o endereço:
 *http://localhost:8080 
 
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/helloWorld.png">
+
+Uma das principais funções de um servidor HTTP é servir páginas HTML. Vamos modificar nosso servidor para que ele faça isso.
+Comente o “app.get”. Ao invés dele, use:
+```
+app.use(express.static(“public”))
+```
+A linha acima indica que tudo que está dentro da pasta “public” será servidor estaticamente simplesmente acessando o nome do arquivo na URL. Exemplo:
+```url
+localhost:8080/pagina.html
+```
+Irá servir a página “pagina.html”, caso ela exista.
