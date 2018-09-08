@@ -540,3 +540,14 @@ npm install express body-parser multer uuid
 Agora vamos criar nosso servidor HTTP!
 Começaremos com um exemplo simples, um simples Hello World!
 
+```html
+var express = require(‘express’);
+var app = express();
+
+app.get(‘/’, function(req, res) 
+{
+    res.send(‘Hello world!’);
+});
+
+app.listen(8080);
+```
