@@ -551,3 +551,5 @@ app.get(‘/’, function(req, res)
 
 app.listen(8080);
 ```
+* “require” exerce a função de um “import”, importando uma biblioteca (no caso, express, que facilita a criação de servidores HTTP)
+* “app.get(‘/’, ...)” cria uma nova rota na nossa aplicação. Toda vez que o usuário fizer uma requisição do tipo GET para o recurso “/”, uma função será invocada para responder esta requisição.
