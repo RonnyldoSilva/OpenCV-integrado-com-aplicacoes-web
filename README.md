@@ -536,3 +536,7 @@ npm init
 ```shell
 npm install express body-parser multer uuid
 ```
+
+Agora vamos criar nosso servidor HTTP!
+Começaremos com um exemplo simples, um simples Hello World!
+
