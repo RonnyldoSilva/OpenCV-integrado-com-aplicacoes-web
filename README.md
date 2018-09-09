@@ -563,6 +563,7 @@ Vamos testar! Inicie a aplicação da seguinte forma:
 node index.js
 ```
 E agora vá em algum browser e acesse o endereço:
+
 http://localhost:8080 
 
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/helloWorld.png">
