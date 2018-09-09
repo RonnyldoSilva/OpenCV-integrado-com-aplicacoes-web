@@ -588,4 +588,5 @@ Para confirmar isto, crie uma pasta chamada “public”, dentro dele crie um ar
 </html>
 ```
 Agora reinicie o servidor e acesse:
+
 *http://localhost:8080 
