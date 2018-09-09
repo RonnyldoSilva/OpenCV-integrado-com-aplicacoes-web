@@ -577,3 +577,5 @@ A linha acima indica que tudo que está dentro da pasta “public” será servi
 localhost:8080/pagina.html
 ```
 Irá servir a página “pagina.html”, caso ela exista.
+
+Para confirmar isto, crie uma pasta chamada “public”, dentro dele crie um arquivo chamado index.html. Povoe-o da seguinte forma:
