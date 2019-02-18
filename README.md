@@ -452,6 +452,10 @@ Agora podemos testar nosso serviço criado. Compile o programa, rode-o na porta 
 
 <img src="https://github.com/RonnyldoSilva/OpenCV-integrado-com-aplicacoes-web/blob/master/images/telnet.png">
 
+```
+telnet localhost 9000
+```
+
 Para saber qual porta do telnet está disponível:
 
 ```shell
