@@ -36,9 +36,9 @@ sudo apt-get install libboost-all-dev
 ## O básico do básico
 
 * Vamos criar uma aplicação simples só pra testar se tudo está OK!
-* Crie uma pasta chamada “SmartFilter”.
-* Dentro desta pasta, crie um arquivo chamado “main.cpp” dentro de uma subpasta chamada “src”.
-* “src” será onde iremos salvar nossos códigos-fonte.
+* Crie uma pasta chamada `SmartFilter`.
+* Dentro desta pasta, crie um arquivo chamado `main.cpp` dentro de uma subpasta chamada `src`.
+* `src` será onde iremos salvar nossos códigos-fonte.
 * Crie o seguinte arquivo: 
 
 src/main.cpp
